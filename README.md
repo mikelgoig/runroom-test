@@ -1,45 +1,46 @@
-# Backend Developer Test
+# runroom-test
 
-## Objetivo
+## Getting Started
 
-El objetivo es valorar tu capacidad de comprensión y mejora de código que no has escrito tú.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-El código de la carpeta `src` está mal estructurado pero tiene buena cobertura de tests,
-deberás **refactorizarlo** para hacerlo más comprensible, mantenible y escalable. 
+### Prerequisites
 
-Todo esto, deberás hacerlo manteniendo los tests funcionando. Es posible que necesites iterarlos
-llegado a cierto punto de la prueba, ya sea porque cambies algun nombre de clase o porque cambien 
-parámetros de entrada. No hay ningúna limitación al respecto.
+- [Docker](https://www.docker.com/) >= 19.03.12
 
-La única limitación es que la funcionalidad se mantenga igual. (Puedes modificar la forma en la que 
-entran y salen los parámetros si consideras que eso mejora la comprensión)
+### Installing
 
-La duración de la prueba debe ser inferior a las 3 horas.
+1. Clone the repository from GitHub:
 
-## Como empezar
+   ```bash
+   git clone https://github.com/mikelgoig/runroom-test.git && cd runroom-test
+   ```
 
-1. Hacer un repositorio nuevo utilizando el código de este (sin hacer un fork).
-2. Hacer al menos un primer commit con el código original, para ver la hora de inicio.
-3. Hacer commits individuales por cada refactor que se está haciendo. El último commit marca el final.
+2. Build the project:
 
-## Que valoramos
+   ```bash
+   .cli/build.sh
+   ```
 
-* Que los test sigan pasando después del refactor
-* La utilización de Git
-* Aplicación de patrones de diseño
-* Estilo de código siguiendo el PSR
-* Simplicidad de la solución
-* Mejora en la API de las clases
-* PHPStan reporta 0 errores en el nivel actual
-* Psalm reporta 0 errores en el nivel actual 
+3. Run the project:
 
-## Bonus points
+   ```bash
+   .cli/up.sh
+   ```
 
-Si has cumplido todos los requisitos que valoramos, y te sobra tiempo puedes mejorar tu prueba
-ampliando con estos nuevos requisitos (recomendamos seguir el orden definido):
+## Running the tests
 
-* Incrementar el nivel de PHPStan
-* Incrementar el nivel de Psalm
-* Configurar PHP-cs-fixer
-* Configuración de Github Actions para ejecutar PHPUnit, PHPStan, Psalm y PHP-cs-fixer
-* Añadir un entorno local con Docker que permita ejecutar todas las herramientas de PHP
+To run all the PHPUnit tests:
+
+```bash
+composer test
+```
+
+## Built With
+
+- [Composer](https://getcomposer.org/) - Dependency Manager for PHP
+- [Docker](https://www.docker.com/) - Enterprise-ready container platform to cost-effectively build and manage your application
+
+## Authors
+
+- **Mikel Goig** - _Backend development_ - [mikelgoig](https://github.com/mikelgoig)
