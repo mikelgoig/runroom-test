@@ -3,6 +3,28 @@ name: CI
 on: [push]
 
 jobs:
+  format-php:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install PHP dependencies
+        run: composer install
+
+      - name: Run PHPStan
+        run: composer check:phpstan
+
+      - name: Run Psalm
+        run: composer check:psalm
+
+      - name: Run PHP-CS-Fixer
+        run: composer check:phpcsfixer
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Apply format-php changes
+
   test-php:
     runs-on: ubuntu-latest
 
