@@ -8,6 +8,7 @@ class ItemFactory
 {
     public function getItemType(string $type): ItemType
     {
+        /** @var class-string<\Runroom\GildedRose\Models\Items\ItemType> $className */
         $className = "Runroom\\GildedRose\\Models\\Items\\{$type}ItemType";
 
         if (!class_exists($className)) {
