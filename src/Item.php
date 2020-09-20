@@ -4,18 +4,25 @@ namespace Runroom\GildedRose;
 
 class Item
 {
+    const TYPE_BASIC = 'Basic';
+    const TYPE_AGED_BRIE = 'AgedBrie';
+    const TYPE_SULFURAS = 'Sulfuras';
+    const TYPE_BACKSTAGE = 'Backstage';
+
     public string $name;
     public int $sellIn;
     public int $quality;
 
+    private string $type;
     private ItemFactory $factory;
 
-    public function __construct(string $name, int $sellIn, int $quality)
+    public function __construct(string $name, int $sellIn, int $quality, string $type = self::TYPE_BASIC)
     {
         $this->name = $name;
         $this->sellIn = $sellIn;
         $this->quality = $quality;
 
+        $this->type = $type;
         $this->factory = new ItemFactory;
     }
 
@@ -28,7 +35,7 @@ class Item
     {
         $this
             ->factory
-            ->getItemType($this->name)
+            ->getItemType($this->type)
             ->updateQuality($this);
     }
 }
