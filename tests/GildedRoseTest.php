@@ -3,8 +3,8 @@
 namespace Runroom\GildedRose\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Runroom\GildedRose\GildedRose;
-use Runroom\GildedRose\Item;
+use Runroom\GildedRose\Models\GildedRose;
+use Runroom\GildedRose\Models\Item;
 
 class GildedRoseTest extends TestCase
 {

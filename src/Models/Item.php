@@ -1,6 +1,8 @@
 <?php
 
-namespace Runroom\GildedRose;
+namespace Runroom\GildedRose\Models;
+
+use Runroom\GildedRose\Factories\ItemFactory;
 
 class Item
 {

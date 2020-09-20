@@ -1,6 +1,6 @@
 <?php
 
-namespace Runroom\GildedRose;
+namespace Runroom\GildedRose\Models;
 
 class GildedRose
 {

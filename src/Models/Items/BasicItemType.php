@@ -1,6 +1,8 @@
 <?php
 
-namespace Runroom\GildedRose;
+namespace Runroom\GildedRose\Models\Items;
+
+use Runroom\GildedRose\Models\Item;
 
 class BasicItemType extends ItemType
 {
