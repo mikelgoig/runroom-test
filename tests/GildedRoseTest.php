@@ -8,9 +8,7 @@ use Runroom\GildedRose\Item;
 
 class GildedRoseTest extends TestCase
 {
-    /**
-     * @test
-     */
+    /** @test */
     public function itemsDegradeQuality(): void
     {
         $items = [new Item('', 1, 5)];
@@ -21,9 +19,7 @@ class GildedRoseTest extends TestCase
         $this->assertEquals(4, $items[0]->quality);
     }
 
-    /**
-     * @test
-     */
+    /** @test */
     public function itemsDegradeDoubleQualityOnceTheSellInDateHasPass(): void
     {
         $items = [new Item('', -1, 5)];
@@ -34,9 +30,7 @@ class GildedRoseTest extends TestCase
         $this->assertEquals(3, $items[0]->quality);
     }
 
-    /**
-     * @test
-     */
+    /** @test */
     public function itemsCannotHaveNegativeQuality(): void
     {
         $items = [new Item('', 0, 0)];
@@ -47,9 +41,7 @@ class GildedRoseTest extends TestCase
         $this->assertEquals(0, $items[0]->quality);
     }
 
-    /**
-     * @test
-     */
+    /** @test */
     public function agedBrieIncreasesQualityOverTime(): void
     {
         $items = [new Item('Aged Brie', 0, 5)];
@@ -60,9 +52,7 @@ class GildedRoseTest extends TestCase
         $this->assertEquals(7, $items[0]->quality);
     }
 
-    /**
-     * @test
-     */
+    /** @test */
     public function qualityCannotBeGreaterThan50(): void
     {
         $items = [new Item('Aged Brie', 0, 50)];
@@ -73,9 +63,7 @@ class GildedRoseTest extends TestCase
         $this->assertEquals(50, $items[0]->quality);
     }
 
-    /**
-     * @test
-     */
+    /** @test */
     public function sulfurasDoesNotChange(): void
     {
         $items = [new Item('Sulfuras, Hand of Ragnaros', 10, 10)];
