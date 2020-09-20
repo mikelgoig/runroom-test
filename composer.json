@@ -32,6 +32,7 @@
     "minimum-stability": "stable",
     "scripts": {
         "check:phpstan": "vendor/bin/phpstan analyse",
+        "check:psalm": "vendor/bin/psalm --show-info=true",
         "test": "vendor/bin/phpunit"
     }
 }
